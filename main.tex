@@ -1,0 +1,36 @@
+\documentclass[a4paper,russian]{article}
+\usepackage[T2A]{fontenc} 
+\usepackage[utf8]{inputenc} 
+
+% Questions formated like \Q{question} 
+% will be parsed into "Q: question"
+\newcommand{\Q}[1]{\textbf{Q:} #1\\}
+
+% Answers formated like \A{answer} 
+% will be parsed into "A: answer" 
+% with 1 empty line after it
+% so that it will be easyer to visually 
+% separate questions from each other
+\newcommand{\A}[1]{
+\textbf{A:} #1\\
+\\
+}
+
+\begin{document}
+\setlength{\parindent}{0in}
+
+\section{Бакалавриат}
+% Create new file in baccalaureate
+% if you think your question
+% doesn't match any of existing subsection
+\subsection{Основные вопросы}
+\input{baccalaureate/FAQ_baccalaureate.txt}
+
+\section{Магситратура}
+% Create new file in magistracy
+% if you think your question
+% doesn't match any of existing subsection
+\subsection{Основные вопросы}
+\input{magistracy/FAQ_magistracy.txt}
+
+\end{document}
